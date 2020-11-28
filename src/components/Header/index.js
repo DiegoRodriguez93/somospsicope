@@ -2,8 +2,37 @@ import React, { useState } from 'react';
 import ham from './ham.png';
 import hamX from './ham-x.png';
 import { NavLink } from 'react-router-dom'
+import { useTranslation } from "react-i18next";
+
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 const Header = () => {
+
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = ({value}) => { 
+
+        if(i18n.language === value){
+            return false
+        }
+
+        document.getElementsByClassName('loading')[0].style.display = 'block';
+        
+        i18n.changeLanguage(value); 
+
+        setTimeout(()=>{
+            document.getElementsByClassName('loading')[0].style.display = 'none';
+        },450);
+    
+    }
+
+    const ARREN = [{ value: 'en', label: 'English' }, { value: 'es', label: 'Spanish' }];
+    const ARRES = [{ value: 'en', label: 'Inglés' }, { value: 'es', label: 'Español' }];
+
+    const options = i18n.language === 'en' ? ARREN : ARRES;
+    const defaultOption = i18n.language === 'en' ? options[0] :  options[1];
+
 
     const [ mobileMenuVisibility, setMobileMenuVisibility ] = useState('none');
 
@@ -26,15 +55,16 @@ const Header = () => {
                     <div className="col-lg-4 sm-6">
                         <h1>PaellasTo<br/>GoMiami</h1>
                     </div>
-                    <nav className="col-lg-4 menu ordenador">
-                        <NavLink exact className="menu-link" activeStyle={isActive} to="/">HOME</NavLink>
-                        <NavLink className="menu-link" activeStyle={isActive} to="/menu">MENU</NavLink>
+                    <nav className="col-lg-8 menu ordenador">
+                        <NavLink exact className="menu-link" activeStyle={isActive} to="/">{t("HOME")}</NavLink>
+                        <NavLink className="menu-link" activeStyle={isActive} to="/menu">{t("MENU")}</NavLink>
                         <NavLink className="menu-link" activeStyle={isActive} to="/chef">CHEF</NavLink>
-                        <NavLink className="menu-link" activeStyle={isActive} to="/about">ABOUT</NavLink>
-                        <NavLink className="menu-link" activeStyle={isActive} to="/contact">CONTACT</NavLink>
+                        <NavLink className="menu-link" activeStyle={isActive} to="/about">{t("ABOUT")}</NavLink>
+                        <NavLink className="menu-link" activeStyle={isActive} to="/contact">{t("CONTACT")}</NavLink>
                     </nav>
                     <div className="col-sm-6 mobile">
                         <img src={ham} onClick={()=>{setMobileMenuVisibility('block')}} className="ham-icon" />
+                        <Dropdown options={options}  onChange={(e) => changeLanguage(e)}  value={defaultOption} placeholder="Select an option" />
                     </div>
                 </div>
             </div>
@@ -43,14 +73,15 @@ const Header = () => {
                 <div className="row">
                     <div className="col-9"></div>
                     <div className="col-3">
+
                         <img src={hamX} onClick={handleDisplayNone} className="ham-icon" />
                     </div>
                     <div className="col-12">
-                        <NavLink exact onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/">HOME</NavLink>
-                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/menu">MENU</NavLink>
+                        <NavLink exact onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/">{t("HOME")}</NavLink>
+                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/menu">{t("MENU")}</NavLink>
                         <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/chef">CHEF</NavLink>
-                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/about">ABOUT</NavLink>
-                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/contact">CONTACT</NavLink>
+                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/about">{t("ABOUT")}</NavLink>
+                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/contact">{t("CONTACT")}</NavLink>
                     </div>
                 </div>
             </div>

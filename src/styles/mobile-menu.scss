@@ -1,6 +1,7 @@
 .mobile-menu{
     background-image: url('/images/spices.jpg');
     background-size: cover;
+    background-color: white;
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -15,4 +16,30 @@
     color: #161616;
     font-size: 2.5em;
     display: block;
+}
+
+.Dropdown-root{
+    display: inline-block;
+    padding-top: 30px;
+    padding-right: 12px;
+    float: right;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Dropdown-control{
+    background-color: transparent!important;
+    border-top: inherit!important;
+    border-right: inherit!important;
+    border-left: inherit!important;
+}
+
+.Dropdown-menu{
+    background-color: transparent!important;
+    border: none!important;
+}
+
+.Dropdown-option{
+    padding-top: 4px;
+    background-color: transparent!important;
+    border-bottom: solid 1px #ccc;
 }

@@ -8,6 +8,9 @@ import Chef from './pages/Chef';
 import Contact from './pages/Contact';
 import Menu from './pages/Menu';
 
+import LanguageSwitcher from './components/LanguageSwitcher'
+
+
 /* import Footer from './components/Footer'; */
 
 
@@ -15,6 +18,7 @@ function App() {
   return (
     <Router>
     <div className="App">
+    <LanguageSwitcher/>
       <Header/>
         <Switch>
             <Route exact path="/" component={Index} />

@@ -52,7 +52,7 @@ p,a {
 
 .hero-button:hover{
     color: $orange;
-    background-color: white;
+    background-color: transparent;
     border: 1px solid $orange;
 }
 
@@ -66,4 +66,32 @@ p,a {
     text-transform: uppercase;
     color: #161616;
     font-weight: bolder;
+}
+
+.vertical-align{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.category{
+    background-color: orange;
+}
+
+.language-switcher{
+    position: fixed;
+    margin-left: 10px;
+    z-index: 1;
+    top: 40%;
+    img{
+        width: 65px;
+        margin-top: 3px;
+    }
+     img:hover{
+        cursor: pointer;
+        opacity: 0.8;
+    } 
+}
+
+.swal2-html-container{
+    font-family: 'Poppins', sans-serif;
 }

@@ -8,6 +8,12 @@ function Menu() {
             <div className="row" style={{margin:0}}>
                 <div className="col-lg-12">
 
+                    <div className="row">
+                        <div className="col-12 category">
+                            <h3>Almuerzos:</h3>
+                        </div>
+                    </div>
+
                     <div className="row menu-container">
                         <div className="col-lg-2 sm-12"></div>
                         <div className="col-lg-8 sm-12">
@@ -15,7 +21,7 @@ function Menu() {
                                 <div className="col-4 menu-img-container">
                                     <img src="/images/menu/breakfast-1.jpg" className="menu-img" alt=""/>
                                 </div>
-                                <div className="col-6">
+                                <div className="col-6 vertical-align">
                                     <h4 className="menu-name">Beef Roast Source</h4>
                                     <h5 className="menu-description">Meat, Potatoes, Rice, Tomatoe</h5>
                                 </div>
@@ -82,6 +88,12 @@ function Menu() {
                             </div>
                         </div>
                         <div className="col-lg-2 sm-12"></div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-12 category">
+                            <h3>Postres:</h3>
+                        </div>
                     </div>
 
                     <div className="row menu-container">
