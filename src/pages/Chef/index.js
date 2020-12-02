@@ -1,18 +1,15 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade';
-import { useTranslation } from "react-i18next";
 
 function Chef() {
-
-    const { t } = useTranslation();
 
     return (
         <Fade>
         <div className="container">
         <div className="row" style={{margin:0}}>
             <div className="col-12 form-container">
-                <h5 className="hero-subtitle">{t("Our Master Chef")}</h5>
-                <h2 className="hero-title" style={{textAlign:'center'}}>{t("Our Master Chef")}</h2>
+                <h5 className="hero-subtitle">Our Master Chef</h5>
+                <h2 className="hero-title" style={{textAlign:'center'}}>Our Master Che</h2>
 {/*                 <h2 className="hero-title">We cook any dish of our gastronomy to the taste of the client.</h2> */}
 
                 <div className="row">

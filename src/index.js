@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import './locale'
 
 ReactDOM.render(
   <React.StrictMode>

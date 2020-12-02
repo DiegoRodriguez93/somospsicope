@@ -2,47 +2,39 @@ import React from 'react';
 
 const Footer = () => {
 
+    const reedirect = (url) => {
+
+        window.open(url, '_blank');
+
+    }
+
     return (
         <footer>
-            <div className="container">
-                <div className="row" style={{flexWrap: 'nowrap'}}>
-                    <div className="col-4">
-                        <h3>Safranal</h3>
-                        <p>Safranal's cooking philosophy Within our gastronomy, the quality of the products, tradition and innovation prevail. Here you will find a committed gastronomy. Tradition and innovation are embraced in our proposal.</p>
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-12 contenedor-de-lineas contenedor-de-lineas-verde"></div>
+                </div>
+                <div className="row zona-celeste">
+
+                    <div className="container">
+                        <div className="row">
+                        <div className="col-lg-4 sm-12 left-side">
+                            <h4>Zona norte, Gran Buenos Aires.</h4>
+                            <h4>info@somospsicope.com</h4>
+                            <img src="/images/iconos/instagram.png" onClick={()=>reedirect('https://www.instagram.com/somospsicope/?hl=es-la')} className="icon-footer" alt="instragram"/>
+                            <img src="/images/iconos/facebook.png" onClick={()=>reedirect('https://www.facebook.com/somospsicope/')} className="icon-footer" alt="facebook"/>
+                            <img src="/images/iconos/whatsapp.png" onClick={()=>reedirect('')} className="icon-footer" alt="whatsapp"/>
+                        </div>
+                        <div className="col-lg-4 sm-0"></div>
+                        <div className="col-lg-4 ordenador vertical-align">
+                            <img src="/images/logo2.png" className="menu-logo-img" alt="logo2 somospsicope"/>
+                        </div>
+                        </div>
                     </div>
-                    <div className="col-4">
-                    <h3>Open Hours</h3>
-                    <p> Monday
-                        Closed
-                        Tuesday
-                        Closed
-                        Wednesday
-                        Closed
-                        Thursday
-                        10:00 - 18:00
-                        Friday
-                        10:00 - 20:00
-                        Saturday
-                        10:00 - 20:00
-                        Sunday
-                        10:00 - 18:00</p>
-                    </div>
-                    <div className="col-4">
-                    <h3>Open Hours</h3>
-                    <p> Monday
-                        Closed
-                        Tuesday
-                        Closed
-                        Wednesday
-                        Closed
-                        Thursday
-                        10:00 - 18:00
-                        Friday
-                        10:00 - 20:00
-                        Saturday
-                        10:00 - 20:00
-                        Sunday
-                        10:00 - 18:00</p>
+                </div>
+                <div className="row">
+                    <div className="col-12 zona-blanca" style={{textAlign:"center"}}>
+                        <h4>Copyright © Somospsicope - Todos los derechos reservados</h4>
                     </div>
                 </div>
             </div>

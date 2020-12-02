@@ -2,37 +2,8 @@ import React, { useState } from 'react';
 import ham from './ham.png';
 import hamX from './ham-x.png';
 import { NavLink } from 'react-router-dom'
-import { useTranslation } from "react-i18next";
-
-import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
 
 const Header = () => {
-
-    const { t, i18n } = useTranslation();
-
-    const changeLanguage = ({value}) => { 
-
-        if(i18n.language === value){
-            return false
-        }
-
-        document.getElementsByClassName('loading')[0].style.display = 'block';
-        
-        i18n.changeLanguage(value); 
-
-        setTimeout(()=>{
-            document.getElementsByClassName('loading')[0].style.display = 'none';
-        },450);
-    
-    }
-
-    const ARREN = [{ value: 'en', label: 'English' }, { value: 'es', label: 'Spanish' }];
-    const ARRES = [{ value: 'en', label: 'Inglés' }, { value: 'es', label: 'Español' }];
-
-    const options = i18n.language === 'en' ? ARREN : ARRES;
-    const defaultOption = i18n.language === 'en' ? options[0] :  options[1];
-
 
     const [ mobileMenuVisibility, setMobileMenuVisibility ] = useState('none');
 
@@ -41,30 +12,32 @@ const Header = () => {
     }
 
     const isActive = {
-        textDecoration:'underline'
+        color:'#e4197c'
       };
 
     const isActiveInMobile = {
-        textDecoration:'line-through'
+        backgroundColor: "rgba(255, 255, 255, 0.5)"
       };
 
     return (
         <header>
-            <div className="container">
-                <div className="row" style={{flexWrap: 'nowrap'}}>
-                    <div className="col-lg-4 sm-6">
-                        <h1>PaellasTo<br/>GoMiami</h1>
+            <div className="container-fluid">
+                <div className="row menu-nowrap">
+                    <div className="col-lg-12 sm-8" style={{textAlign:'center'}}>
+                        <img src="/images/logo.png" className="menu-logo-img" alt="logo somospsicope"/>
                     </div>
-                    <nav className="col-lg-8 menu ordenador">
-                        <NavLink exact className="menu-link" activeStyle={isActive} to="/">{t("HOME")}</NavLink>
-                        <NavLink className="menu-link" activeStyle={isActive} to="/menu">{t("MENU")}</NavLink>
-                        <NavLink className="menu-link" activeStyle={isActive} to="/chef">CHEF</NavLink>
-                        <NavLink className="menu-link" activeStyle={isActive} to="/about">{t("ABOUT")}</NavLink>
-                        <NavLink className="menu-link" activeStyle={isActive} to="/contact">{t("CONTACT")}</NavLink>
-                    </nav>
-                    <div className="col-sm-6 mobile">
+
+                    <div className="col-lg-12 menu ordenador" style={{textAlign:'center'}}>
+                        <NavLink exact className="menu-link" activeStyle={isActive} to="/">Inicio</NavLink>
+                        <NavLink className="menu-link" activeStyle={isActive} to="/menu">Quiénes somos</NavLink>
+                        <NavLink className="menu-link" activeStyle={isActive} to="/chef">Capacitaciones</NavLink>
+                        <NavLink className="menu-link" activeStyle={isActive} to="/about">Supervisiones</NavLink>
+                        <NavLink className="menu-link" activeStyle={isActive} to="/contact">Materiales</NavLink>
+                        <NavLink className="menu-link" activeStyle={isActive} to="/contact">Galería de fotos</NavLink>
+                    </div>
+                    <div className="col-sm-4 mobile">
                         <img src={ham} onClick={()=>{setMobileMenuVisibility('block')}} className="ham-icon" />
-                        <Dropdown options={options}  onChange={(e) => changeLanguage(e)}  value={defaultOption} placeholder="Select an option" />
+                       
                     </div>
                 </div>
             </div>
@@ -77,11 +50,12 @@ const Header = () => {
                         <img src={hamX} onClick={handleDisplayNone} className="ham-icon" />
                     </div>
                     <div className="col-12">
-                        <NavLink exact onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/">{t("HOME")}</NavLink>
-                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/menu">{t("MENU")}</NavLink>
-                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/chef">CHEF</NavLink>
-                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/about">{t("ABOUT")}</NavLink>
-                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/contact">{t("CONTACT")}</NavLink>
+                        <NavLink exact onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/">Inicio</NavLink>
+                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/menu">Quiénes somos</NavLink>
+                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/chef">Capacitaciones</NavLink>
+                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/about">Supervisiones</NavLink>
+                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/about">Materiales</NavLink>
+                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile menu-link-mobile-border-bottom" to="/contact">Galería de fotos</NavLink>
                     </div>
                 </div>
             </div>
