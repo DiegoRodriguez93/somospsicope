@@ -29,14 +29,14 @@ const Header = () => {
 
                     <div className="col-lg-12 menu ordenador" style={{textAlign:'center'}}>
                         <NavLink exact className="menu-link" activeStyle={isActive} to="/">Inicio</NavLink>
-                        <NavLink className="menu-link" activeStyle={isActive} to="/menu">Quiénes somos</NavLink>
-                        <NavLink className="menu-link" activeStyle={isActive} to="/chef">Capacitaciones</NavLink>
-                        <NavLink className="menu-link" activeStyle={isActive} to="/about">Supervisiones</NavLink>
-                        <NavLink className="menu-link" activeStyle={isActive} to="/contact">Materiales</NavLink>
-                        <NavLink className="menu-link" activeStyle={isActive} to="/contact">Galería de fotos</NavLink>
+                        <NavLink className="menu-link" activeStyle={isActive} to="/quienes-somos">Quiénes somos</NavLink>
+                        <NavLink className="menu-link" activeStyle={isActive} to="/capacitaciones">Capacitaciones</NavLink>
+                        <NavLink className="menu-link" activeStyle={isActive} to="/supervisiones">Supervisiones</NavLink>
+                        <NavLink className="menu-link" activeStyle={isActive} to="/materiales">Materiales</NavLink>
+                        <NavLink className="menu-link" activeStyle={isActive} to="/galeria-de-fotos">Galería de fotos</NavLink>
                     </div>
                     <div className="col-sm-4 mobile">
-                        <img src={ham} onClick={()=>{setMobileMenuVisibility('block')}} className="ham-icon" />
+                        <img src={ham} onClick={()=>{setMobileMenuVisibility('block')}} alt="ham icon" className="ham-icon" />
                        
                     </div>
                 </div>
@@ -47,15 +47,15 @@ const Header = () => {
                     <div className="col-9"></div>
                     <div className="col-3">
 
-                        <img src={hamX} onClick={handleDisplayNone} className="ham-icon" />
+                        <img src={hamX} onClick={handleDisplayNone} alt="ham icon" className="ham-icon" />
                     </div>
                     <div className="col-12">
                         <NavLink exact onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/">Inicio</NavLink>
-                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/menu">Quiénes somos</NavLink>
-                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/chef">Capacitaciones</NavLink>
-                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/about">Supervisiones</NavLink>
-                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/about">Materiales</NavLink>
-                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile menu-link-mobile-border-bottom" to="/contact">Galería de fotos</NavLink>
+                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/quienes-somos">Quiénes somos</NavLink>
+                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/capacitaciones">Capacitaciones</NavLink>
+                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/supervisiones">Supervisiones</NavLink>
+                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile" to="/materiales">Materiales</NavLink>
+                        <NavLink onClick={handleDisplayNone} activeStyle={isActiveInMobile} className="menu-link-mobile menu-link-mobile-border-bottom" to="/galeria-de-fotos">Galería de fotos</NavLink>
                     </div>
                 </div>
             </div>

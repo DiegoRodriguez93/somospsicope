@@ -1,0 +1,13 @@
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: $pink;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $purple;
+  }

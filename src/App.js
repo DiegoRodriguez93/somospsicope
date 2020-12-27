@@ -5,9 +5,12 @@ import './styles/main.scss';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Index from './pages/Index';
-import Chef from './pages/Chef';
+import QuienesSomos from './pages/QuienesSomos';
+import Capacitaciones from './pages/Capacitaciones';
+import Supervisiones from './pages/Supervisiones';
 import Contact from './pages/Contact';
 import Menu from './pages/Menu';
+import Materiales from './pages/Materiales';
 
 function App() {
   return (
@@ -16,7 +19,10 @@ function App() {
       <Header/>
         <Switch>
             <Route exact path="/" component={Index} />
-            <Route path="/chef" component={Chef} />
+            <Route path="/quienes-somos" component={QuienesSomos} />
+            <Route path="/capacitaciones" component={Capacitaciones} />
+            <Route path="/supervisiones" component={Supervisiones} />
+            <Route path="/materiales" component={Materiales} />
             <Route path="/contact" component={Contact} />
             <Route path="/menu" component={Menu} />
         </Switch>

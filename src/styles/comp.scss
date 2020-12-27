@@ -1,117 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap');
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Open Sans', sans-serif;
 }
 
-p,a {
+p,
+a,
+ul,
+li {
     font-family: 'Open Sans', sans-serif;
 }
 
-.cursiva{
+.cursiva {
     font-family: 'Great Vibes';
 }
 
-.menu-link{
+.menu-link {
     text-decoration: none;
-    padding-left:2.5%;
+    padding-left: 2.5%;
     color: $light-blue;
-    font-size: 1.31em;
+    font-size: 1.19em;
     font-weight: bolder;
 }
 
-.menu-link:hover{
+.menu-link:hover {
     text-decoration: underline;
 }
 
-.carousel-status{
-    display: none!important;
+.carousel-status {
+    display: none !important;
 }
 
-.hero-title{
-    font-size: 2.8em;
-    color: #1c1c1c;
+.subtitle{
+    font-size: 1.25em;
+    font-weight: 800;
+    color: $white;
+    margin:0;
+
+    padding: 10px 20px 10px 20px;
+    display: inline-block;
+    opacity: 0.75;
+    &-blue{
+        background-color: $light-blue;
+        margin-bottom: 30px;
+    }
+    &-pink{
+        background-color: $pink;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    &-green{
+        background-color: $green;
+        margin-bottom: 12px;
+        margin-top: 12px;
+    }
 }
 
-.hero-subtitle{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2em;
-    color: $orange;
-    text-transform: uppercase;
-}
-
-.hero-button{
-    background-color: $orange;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    padding: 24px;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    cursor: pointer;
-    border: 1px solid;
-}
-
-.hero-button:hover{
-    color: $orange;
-    background-color: transparent;
-    border: 1px solid $orange;
-}
-
-.chef-name{
-    font-size: 3.0em;
-    color: $orange;
-}
-
-.chef-title{
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
-    color: #161616;
-    font-weight: bolder;
-}
-
-.vertical-align{
+.vertical-align {
     margin-top: auto;
     margin-bottom: auto;
 }
 
-.category{
+.horizontal-align {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.category {
     background-color: orange;
 }
 
-.language-switcher{
+.language-switcher {
     position: fixed;
     margin-left: 10px;
     z-index: 1;
     top: 40%;
-    img{
+
+    img {
         width: 65px;
         margin-top: 3px;
     }
-     img:hover{
+
+    img:hover {
         cursor: pointer;
         opacity: 0.8;
-    } 
+    }
 }
 
-.swal2-html-container{
+.swal2-html-container {
     font-family: 'Open Sans', sans-serif;
 }
 
-.contaier-brains{
+.contaier-brains {
     max-height: 450px;
     width: 100%;
     margin-top: 40px;
     padding: 0;
 }
 
-.brains{
+.brains {
     object-fit: cover;
     display: block;
     width: 100%;
     max-height: 450px;
 }
 
-.books{
+.books {
     object-fit: cover;
     display: block;
     width: 100%;
@@ -120,7 +123,7 @@ p,a {
     opacity: 0.6;
 }
 
-.text-on-brains{
+.text-on-brains {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -128,120 +131,391 @@ p,a {
     text-align: center;
     background-color: $light-blue;
     padding: 20px;
-    h1{
+
+    h1 {
         color: white;
         padding: 0;
-        margin:0;
+        margin: 0;
         font-size: 1.8em;
     }
 }
 
-.text-on-books{
+.text-on-books {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     padding: 20px;
-    h1{
+
+    h1 {
         color: $purple;
         padding: 0;
-        margin:0;
+        margin: 0;
         margin-bottom: 18px;
         font-size: 1.8em;
         font-weight: 800;
     }
 }
 
-.contenedor-de-lineas{
+@keyframes animatedBackground {
+    from { background-position: 0px 0; }
+    to { background-position: -562px 0; }
+  }
+
+.contenedor-de-lineas {
     width: 100%;
     height: 35px;
     padding: 0;
     margin: 0;
     background-repeat: repeat-x;
-    &-amarillo{
+
+    &-amarillo {
         background-image: url("/images/linea-amarilla.png");
+        animation: animatedBackground 22s linear infinite;
     }
-    &-verde{
-        background-image: url("/images/linea-verde.png");  
+
+    &-verde {
+        background-image: url("/images/linea-verde.png");
+        animation: animatedBackground 22s linear infinite;
     }
 }
 
-.index1{
+.index1 {
     width: 100%;
     display: block;
     padding: 8%;
 }
 
-.index1-right{
-    h3{
+.index1-right {
+    h3 {
         font-size: 1.7em;
         font-weight: 800;
         color: $pink;
     }
-    p{
+
+    p {
         font-weight: 600;
     }
 }
 
-.index2-box{
+.index2-box {
     padding: 15px;
     border: solid 20px #f6e62f;
     text-align: center;
-    h4{
+
+    h4 {
         font-size: 1.8em;
         font-weight: 800;
         padding: 0;
         margin: 0;
     }
-    p{
+    p {
         font-weight: 700;
+    }
+    &-white{
+        border: solid 20px $white;
+        p{
+            font-weight: 800;
+        }
     }
 }
 
-.index3{
+.index3 {
     margin-top: 35px;
     margin-bottom: 35px;
-    img{
+
+    img {
         display: block;
         width: 90%;
     }
-    h4{
+
+    h4 {
         color: $purple;
         font-weight: 800;
         font-size: 1.8em;
         padding: 0;
         margin: 0;
     }
-    p{
+
+    p {
         font-weight: bold;
     }
 }
 
-.btn{
-    padding: 10px 25px 10px 25px;
+.btn {
+    padding: 10px 28px 10px 28px;
     border-radius: 20px;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2em;
     color: white;
     border: none;
-    &-sm{
+    text-decoration: none;
+    &-sm {
         font-size: 1em;
-        padding: 5px 12px 5px 12px;
+        padding: 5px 18px 5px 18px;
     }
-    &-yellow{background-color: $yellow;}
-    &-purple{background-color: $purple;}
+
+    &-yellow {
+        background-color: $yellow;
+    }
+
+    &-purple {
+        background-color: $purple;
+    }
 }
 
-.btn:hover{
+.btn:hover {
     cursor: pointer;
     opacity: 0.8;
 }
 
-.hr{
+.hr {
     border-top: 5px solid $pink;
     width: 100%;
     margin: 0;
-    &-top{margin-top: 20px;}
-    &-bottom{margin-bottom: 20px;}
+
+    &-top {
+        margin-top: 20px;
+    }
+
+    &-bottom {
+        margin-bottom: 20px;
+    }
+}
+
+.contaier-header2 {
+    max-height: 450px;
+    width: 100%;
+    margin-top: 40px;
+    padding: 0;
+}
+
+.header2 {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    max-height: 250px;
+    min-height: 200px;
+}
+
+.text-on-header2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: $light-blue;
+    padding: 20px;
+
+    h1 {
+        color: white;
+        padding: 0;
+        margin: 0;
+        font-size: 1.8em;
+    }
+
+    &-pink {
+        background-color: $pink;
+        padding: 20px 40px 20px 40px;
+    }
+    &-purple {
+        background-color: $purple;
+        padding: 20px 40px 20px 40px;
+    }
+    &-blue {
+        background-color: $light-blue;
+        padding: 20px 40px 20px 40px;
+    }
+    &-green {
+        background-color: $green;
+        padding: 20px 40px 20px 40px;
+    }
+}
+
+.quienesSomos1 {
+    margin-top: 30px;
+
+    &-img {
+        display: block;
+        width: 75%;
+    }
+
+    &-p {
+        width: 75%;
+    }
+
+    h3 {
+        color: $pink;
+        font-weight: 800;
+    }
+}
+
+.quienesSomos2 {
+    &-title {
+        text-align: center;
+
+        h1 {
+            font-weight: 800;
+            color: $purple;
+            font-size: 1.9em;
+            padding: 15px;
+        }
+    }
+
+    &-text {
+        font-family: 'Open Sans', sans-serif;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: block;
+        font-weight: bolder;
+        line-height: 1.15;
+    }
+
+    &-box {
+        display: flex;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+.quienesSomos3 {
+    &-container {
+        padding: 0;
+        background-color: $purple;
+        color: white;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 1.9em;
+        padding: 15px;
+    }
+}
+
+.capacitaciones1{
+    h2{
+        color: $pink;
+        font-weight: 800;
+        font-size:1.8em;
+        line-height: 1.25;
+    }
+    h4{
+        color: #3b3b3b;
+        font-weight: 800;
+        font-size: 1.4em;
+    }
+}
+
+.capacitaciones3{
+    &-contact{
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+    h2{
+        font-size: 1.63em;
+        font-weight: 800;
+        color: $pink;
+    }
+    ul{
+        margin: 0;
+        padding-left: 22px;
+    }
+    h6{
+        margin: 3px;
+        font-weight: 800;
+        font-size:0.9em;
+        line-height: 1.25;
+    }
+}
+
+.capacitaciones-especialistas {
+
+    &-name {
+        h1 {
+            color: $purple;
+            text-decoration: underline;
+            float: right;
+        }
+
+    }
+
+}
+
+.supervisiones2{
+
+    h2{
+        color: $pink;
+        font-weight: 800;
+        font-size: 2.1em;
+        white-space: pre;
+    }
+    h5{
+        font-style: italic;
+        font-size: 1.1em;
+        color: $purple;
+    }
+    p{
+        font-weight: bold;
+    }
+
+    &-form{
+        input{
+            border: none;
+            font-family: 'Open Sans', sans-serif;
+            font-style: italic;
+            display: block;
+            width: 75%;
+            padding: 10px;
+            margin-bottom: 8px;
+        }
+    }
+
+}
+
+.materiales-img{
+    display: block;
+    width: 100%;
+}
+
+.materiales-img2{
+    display: block;
+    max-width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.materiales2{
+    text-align: center;
+h1{
+    color: $pink;
+    font-size: 2.0em;
+}
+p{
+    font-weight: bold;
+}
+}
+
+.close{
+    color: red;
+    border: none;
+    float: right;
+    background-color: inherit;
+    font-size: 1.8em;
+    transform: translateY(36px);
+}
+
+.close:hover{
+    cursor: pointer;
+    color: grey;
+}
+
+.error-form{
+    color: red;
+    font-family: 'Open sans';
+    font-size: 0.85em;
+    display: block;
+    padding-bottom: 6px;
+    padding-left: 6px;
 }
