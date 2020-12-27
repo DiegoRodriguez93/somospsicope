@@ -208,9 +208,14 @@ footer{
     padding: 3%!important;
     background-color: rgb(240, 240, 240)!important;
     .title{
-        color: $purple;
         font-weight: 900;
         margin: 0;
         padding: 0;
+        &-purple{
+            color: $purple;
+        }
+        &-pink{
+            color: $pink;
+        }
     }
 }

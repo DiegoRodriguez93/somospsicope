@@ -17,7 +17,7 @@ const customStyles = {
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement("#root");
 
-export default function ModalConsultorio({ setIsOpenModal }) {
+export default function ModalCapacitaciones({ setIsOpenModal }) {
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, e) => {
 
@@ -41,16 +41,15 @@ export default function ModalConsultorio({ setIsOpenModal }) {
     formData.append("fullName", fullName);
     formData.append("email", email);
     formData.append("phone", phone);
-    formData.append("message", message);
 
-    fetch("https://somospsicope.com/api/forms/mensajeConsultorio.php", {
+    fetch("https://somospsicope.com/api/forms/inscribirmeCapacitacion.php", {
       method: "POST",
       body: formData,
     })
       .then((response) => response.json())
       .then((res) => {
         console.log(res);
-        setTimeout(()=>{Swal.fire('Correcto!', 'Mensaje enviado correctamente, en breve alguien se pondrá en contacto!', 'success');},2500) 
+        setTimeout(()=>{Swal.fire('Correcto!', 'Inscripción inicial realizada correctamente, en breve alguien se pondrá en contacto!', 'success');},2500) 
         e.target.reset();
       })
       .catch((error) => Swal.fire('Error!', 'Ha ocurrido un error, intente más tarde!', 'error'))
@@ -90,7 +89,7 @@ export default function ModalConsultorio({ setIsOpenModal }) {
         <button className="close" onClick={closeModal}>
           X
         </button>
-        <h1 className="title title-purple">Consultorio</h1>
+        <h1 className="title title-pink">Consultorio</h1>
         <div className="row">
           <div className="col-lg-8 sm-12">
             <p>
@@ -131,15 +130,6 @@ export default function ModalConsultorio({ setIsOpenModal }) {
             ref={register()}
             placeholder="Teléfono"
           />
-          <input
-            type="text"
-            name="message"
-            ref={register({ required: true })}
-            placeholder="Motivo de consulta*"
-          />
-          <b className="error-form">
-            {errors.message && "Motivo de consulta requerido."}
-          </b>
           <div className="button-container">
             <button
               className="btn btn-yellow btn-sm"

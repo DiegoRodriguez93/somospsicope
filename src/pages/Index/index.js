@@ -33,7 +33,7 @@ export default function Index() {
                         <div className="col-lg-6 sm-12 index1-right vertical-align">
                             <h3>{t("inicio-welcome")}</h3>
                             <p>{t("inicio-welcome-sub")}</p>
-                            <button className="btn btn-yellow">Ver más</button>
+                            <Link to="/quienes-somos" className="btn btn-yellow">Ver más</Link>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ export default function Index() {
                             <img src="/images/books.jpeg" className="books" alt="books somospsicope"/>
                             <div className="text-on-books">
                                 <h1>¡Sumate a nuestras capacitaciones!</h1>
-                                <button className="btn btn-purple">Ver más</button>
+                                <Link to="/capacitaciones" className="btn btn-purple">Ver más</Link>
                             </div>
                         </div>
                     </div>
@@ -60,19 +60,19 @@ export default function Index() {
                                         <img src="/images/iconos/capacitaciones.png" alt="capacitaciones somospsicope"/>
                                         <h4>{t("inicio-card1")}</h4>
                                         <p>{t("inicio-card1-sub")}</p>
-                                        <button className="btn btn-purple btn-sm">Ver más</button>
+                                        <Link to="/capacitaciones" className="btn btn-purple btn-sm">Ver más</Link>
                                     </div>
                                     <div className="col-lg-4 sm-12 index2-box" style={{backgroundColor:"#90ccea"}}>
                                         <img src="/images/iconos/supervisiones.png" alt="supervisiones somospsicope"/>
                                         <h4>{t("inicio-card2")}</h4>
                                         <p>{t("inicio-card2-sub")}</p>
-                                        <button className="btn btn-purple btn-sm">Ver más</button>
+                                        <Link to="/supervisiones" className="btn btn-purple btn-sm">Ver más</Link>
                                     </div>
                                     <div className="col-lg-4 sm-12 index2-box" style={{backgroundColor:"#f0a2c6"}}>
                                         <img src="/images/iconos/materiales.png" alt="materiales somospsicope"/>
                                         <h4>{t("inicio-card3")}</h4>
                                         <p>{t("inicio-card3-sub")}</p>
-                                        <button className="btn btn-purple btn-sm">Ver más</button>
+                                        <Link to="/materiales" className="btn btn-purple btn-sm">Ver más</Link>
                                     </div>
                                 </div>
                             </div>

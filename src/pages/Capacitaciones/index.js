@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Fade from 'react-reveal/Fade';
-import { Link } from 'react-router-dom';
+import ModalCapacitaciones from '../../components/ModalCapacitaciones'
 
 export default function Capacitaciones() {
+
+    const [isOpenModal, setIsOpenModal] = useState(false);
 
     return (
         <Fade>
@@ -90,7 +92,7 @@ export default function Capacitaciones() {
                                         <h6>Depósito bancario</h6>
                                         <h6>Mercado Pago</h6>
                                         <h6>PayPal</h6>
-                                        <button className="btn btn-purple" style={{marginTop:'40px', marginBottom:'25px'}}>Quiero inscribirme</button>
+                                        <button onClick={()=>{setIsOpenModal(true); setTimeout(()=>{setIsOpenModal(false);},1500) }} className="btn btn-purple" style={{marginTop:'40px', marginBottom:'25px'}}>Quiero inscribirme</button>
                                     </div>
 
                                 </div>
@@ -130,6 +132,7 @@ export default function Capacitaciones() {
                 </div>
 
             </section>
+            <ModalCapacitaciones setIsOpenModal={isOpenModal} />
         </Fade>
     )
 }
