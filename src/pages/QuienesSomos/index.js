@@ -4,7 +4,7 @@ import { Trans, useTranslation } from 'react-i18next';
 
 export default function QuienesSomos() {
 
-    useTranslation();
+   const { t } = useTranslation();
     
     const reedirect = (url) => {
 
@@ -32,46 +32,26 @@ export default function QuienesSomos() {
                         <div className="col-lg-6 sm-12  quienesSomos1 vertical-align">
                             <img src="/images/victoria-maseras.jpg" className="quienesSomos1-img  horizontal-align" alt="quienesSomos1 somospsicope"/>
                             <h3 className="center-text">Victoria Maseras</h3>
-                            <p className="quienesSomos1-p horizontal-align">-Licenciada y Profesora de Psicopedagogía(USAL).<br/>
-                            -Residencia de Psicopedagogía del GCBA Sede Hospital J. M. Ramos Mejía.<br/>
-                            -Psicopedagoga del Servicio de Pediatría del Hospital Materno Infantil Dr.
-                            Florencio Escardó en el Equipo Interdisciplinario de Neurodesarrollo y 
-                            Consultorio de Alto Riesgo.<br/>
-                            -Psicopedagoga en el Servicio de Neuropediatría del Departamento Materno
-                            Infanti del Hospital Universitario Austral.<br/>
-                            -Docente universitaria de la Universidad Del Salvador en la Cátedra de 
-                            Tratamiento Psicopedagógico de la Carrera de Psicopedagogía.<br/>
-                            -Atención Infantojuvenil en el consultorio particular.<br/>
-                            -Coordinación de capacitaciones profesionales y superviciones clínicas a 
-                            psicopedagogos.<br/>
-                            -Coordinación de charlas a docentes y padres.<br/>
-                            -Experiencia como Psicopedagoga en Equipo de Orientación Institucional del
-                            Colegio Cardenal Copello (Devoto, CABA).<br/>
-                            -Práctica Profesional en Centro de Reeducación del Lenguaje Entender y Hablar
-                            y Colegio Tres Olivos. Monfort. Madrid, España.
-                            </p>
+
+                                <p
+                                className="quienesSomos1-p horizontal-align"
+                                    dangerouslySetInnerHTML={{
+                                        __html: t("quienes-somos-victoria"),
+                                    }}
+                                    ></p> 
+
                         </div>
                         <div className="col-lg-6 sm-12 quienesSomos1 vertical-align">
                             <img src="/images/loreley-arizmendi.jpg" className="quienesSomos1-img horizontal-align" alt="quienesSomos1 somospsicope"/>
                             <h3 className="center-text">Loreley Arizmendi</h3>
-                            <p className="quienesSomos1-p horizontal-align">-Licenciada y Profesora de Psicopedagogía(USAL).<br/>
-                            -Residencia de Psicopedagogía del GCBA Sede Hospital J. M. Ramos Mejía.<br/>
-                            -Psicopedagoga del Servicio de Pediatría del Hospital Materno Infantil Dr.
-                            Florencio Escardó en el Equipo Interdisciplinario de Neurodesarrollo y 
-                            Consultorio de Alto Riesgo.<br/>
-                            -Psicopedagoga en el Servicio de Neuropediatría del Departamento Materno
-                            Infanti del Hospital Universitario Austral.<br/>
-                            -Docente universitaria de la Universidad Del Salvador en la Cátedra de 
-                            Tratamiento Psicopedagógico de la Carrera de Psicopedagogía.<br/>
-                            -Atención Infantojuvenil en el consultorio particular.<br/>
-                            -Coordinación de capacitaciones profesionales y superviciones clínicas a 
-                            psicopedagogos.<br/>
-                            -Coordinación de charlas a docentes y padres.<br/>
-                            -Experiencia como Psicopedagoga en Equipo de Orientación Institucional del
-                            Colegio Cardenal Copello (Devoto, CABA).<br/>
-                            -Práctica Profesional en Centro de Reeducación del Lenguaje Entender y Hablar
-                            y Colegio Tres Olivos. Monfort. Madrid, España.
-                            </p>
+                             
+                                <p
+                                className="quienesSomos1-p horizontal-align"
+                                    dangerouslySetInnerHTML={{
+                                        __html: t("quienes-somos-loreley"),
+                                    }}
+                                ></p>
+
                             
                         </div>
                     </div>
@@ -82,7 +62,7 @@ export default function QuienesSomos() {
                 <div className="container-fluid" style={{backgroundColor:"#f0f0f0", paddingBottom:'75px'}}>
                     <div className="row">
                         <div className="col-12 quienesSomos2-title">
-                            <h1>¿Qué encontrarás en Somospsicope?</h1>
+                            <h1><Trans i18nKey="quienes-somos-que-encontraras" /></h1>
                         </div>
                         <div className="col-12" >
 

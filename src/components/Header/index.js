@@ -9,6 +9,12 @@ const Header = () => {
 
     const handleDisplayNone = () => {
         setMobileMenuVisibility('none');
+        document.body.style.overflowY = "scroll";
+    }
+
+    const handleDisplayBlock = () => {
+        setMobileMenuVisibility('block');
+        document.body.style.overflowY = "hidden";
     }
 
     const isActive = {
@@ -36,7 +42,7 @@ const Header = () => {
                         <NavLink className="menu-link" activeStyle={isActive} to="/galeria-de-fotos">Galería de fotos</NavLink>
                     </div>
                     <div className="col-sm-4 mobile">
-                        <img src={ham} onClick={()=>{setMobileMenuVisibility('block')}} alt="ham icon" className="ham-icon" />
+                        <img src={ham} onClick={handleDisplayBlock} alt="ham icon" className="ham-icon" />
                        
                     </div>
                 </div>
@@ -45,8 +51,7 @@ const Header = () => {
             <div className="container-fluid mobile-menu" style={{display:mobileMenuVisibility}}>
                 <div className="row">
                     <div className="col-9"></div>
-                    <div className="col-3">
-
+                    <div className="col-3" style={{marginBottom:'40px'}}>
                         <img src={hamX} onClick={handleDisplayNone} alt="ham icon" className="ham-icon" />
                     </div>
                     <div className="col-12">

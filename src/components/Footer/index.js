@@ -1,12 +1,7 @@
 import React from 'react';
+import { redirect } from './../../handler/redirect';
 
 const Footer = () => {
-
-    const reedirect = (url) => {
-
-        window.open(url, '_blank');
-
-    }
 
     return (
         <footer>
@@ -21,9 +16,9 @@ const Footer = () => {
                         <div className="col-lg-4 sm-12 left-side">
                             <h4>Zona norte, Gran Buenos Aires.</h4>
                             <h4>info@somospsicope.com</h4>
-                            <img src="/images/iconos/instagram.png" onClick={()=>reedirect('https://www.instagram.com/somospsicope/?hl=es-la')} className="icon-footer" alt="instragram"/>
-                            <img src="/images/iconos/facebook.png" onClick={()=>reedirect('https://www.facebook.com/somospsicope/')} className="icon-footer" alt="facebook"/>
-                            <img src="/images/iconos/whatsapp.png" onClick={()=>reedirect('')} className="icon-footer" alt="whatsapp"/>
+                            <img src="/images/iconos/instagram.png" onClick={()=>redirect('https://www.instagram.com/somospsicope/?hl=es-la')} className="icon-footer" alt="instragram"/>
+                            <img src="/images/iconos/facebook.png" onClick={()=>redirect('https://www.facebook.com/somospsicope/')} className="icon-footer" alt="facebook"/>
+                            <img src="/images/iconos/whatsapp.png" onClick={()=>redirect('')} className="icon-footer" alt="whatsapp"/>
                         </div>
                         <div className="col-lg-4 sm-0"></div>
                         <div className="col-lg-4 ordenador vertical-align">

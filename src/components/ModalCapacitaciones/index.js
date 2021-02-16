@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2'
+import { useTranslation } from 'react-i18next';
 
 const customStyles = {
   content: {
@@ -18,6 +19,7 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 export default function ModalCapacitaciones({ setIsOpenModal }) {
+  const { t } = useTranslation();
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, e) => {
 
@@ -35,12 +37,14 @@ export default function ModalCapacitaciones({ setIsOpenModal }) {
       showConfirmButton: false
     });
 
-    const { fullName, email, phone, message } = data;
+    const { fullName, email, phone, dni, profesion } = data;
     let formData = new FormData();
 
     formData.append("fullName", fullName);
     formData.append("email", email);
     formData.append("phone", phone);
+    formData.append("dni", dni);
+    formData.append("profesion", profesion);
 
     fetch("https://somospsicope.com/api/forms/inscribirmeCapacitacion.php", {
       method: "POST",
@@ -89,14 +93,11 @@ export default function ModalCapacitaciones({ setIsOpenModal }) {
         <button className="close" onClick={closeModal}>
           X
         </button>
-        <h1 className="title title-pink">Consultorio</h1>
+        <h1 className="title title-pink">Inscripción a la capacitación</h1>
         <div className="row">
           <div className="col-lg-8 sm-12">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
-              vitae error asperiores, dignissimos illum deleniti accusamus
-              perspiciatis nemo reiciendis temporibus hic, iure eligendi
-              accusantium rem tempora sed quia harum voluptates.
+              {t('modal-capacitaciones-description')}
             </p>
           </div>
           <div className="col-lg-4 sm-12"></div>
@@ -130,9 +131,24 @@ export default function ModalCapacitaciones({ setIsOpenModal }) {
             ref={register()}
             placeholder="Teléfono"
           />
+           <input
+            type="text"
+            name="profesion"
+            ref={register({ required: true })}
+            placeholder="Profesión*"
+          />
+          <b className="error-form">
+            {errors.profesion && "Profesión requerida."}
+          </b>
+          <input
+            type="text"
+            name="dni"
+            ref={register()}
+            placeholder="DNI (Argentinos)"
+          />
           <div className="button-container">
             <button
-              className="btn btn-yellow btn-sm"
+              className="btn btn-purple btn-sm"
               style={{ marginTop: "30px" }}
             >
               ENVIAR

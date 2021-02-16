@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2'
+import { useTranslation } from 'react-i18next';
 
 const customStyles = {
   content: {
@@ -18,6 +19,7 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 export default function ModalConsultorio({ setIsOpenModal }) {
+  const { t } = useTranslation();
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, e) => {
 
@@ -94,10 +96,7 @@ export default function ModalConsultorio({ setIsOpenModal }) {
         <div className="row">
           <div className="col-lg-8 sm-12">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
-              vitae error asperiores, dignissimos illum deleniti accusamus
-              perspiciatis nemo reiciendis temporibus hic, iure eligendi
-              accusantium rem tempora sed quia harum voluptates.
+             {t("consultorio-modal-description")}
             </p>
           </div>
           <div className="col-lg-4 sm-12"></div>

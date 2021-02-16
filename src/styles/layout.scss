@@ -12,6 +12,7 @@ header{
     width:45px;
     float: right;
     padding-top: 30px;
+    margin-right: 10px;
     cursor: pointer;
 }
 @media only screen and (max-width: 442px){
@@ -84,6 +85,19 @@ header{
     
     .ReactModal__Content{
         width: 97%!important;
+    }
+    .materiales{
+        &-title{margin-left: 15px;}
+        &-description{margin-left: 15px;}
+    }
+    .w-50{
+        width: 100%!important;
+    }
+    .w-25{
+        width: 50%!important;
+        img{
+            min-height: 200px;
+        }
     }
   }
   @media only screen and (min-width: 1024px) {
@@ -204,7 +218,7 @@ footer{
 }
 
 .ReactModal__Content{
-    width: 65%;
+    width: 48%;
     padding: 3%!important;
     background-color: rgb(240, 240, 240)!important;
     .title{
@@ -216,6 +230,46 @@ footer{
         }
         &-pink{
             color: $pink;
+        }
+    }
+}
+
+.galeria-de-fotos-container{
+/*     margin: auto;
+    text-align: center; */
+    padding: 1.5%;
+}
+
+.galeria-de-fotos-img{
+    width: 100%;
+    max-height: 200px;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+}
+
+.galeria-de-fotos-img2{
+    width: 100%;
+    max-height: 400px;
+    display: block;
+    margin: auto;
+}
+
+.materiales{
+    margin-bottom: 30px;
+    &-title{
+        color: $purple;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    &-price{
+        color: $dark-grey;
+        font-weight: 900;
+        h2{padding: 0;
+        margin: 0;}
+        &-description{
+            float: left;
+            color: $purple;
         }
     }
 }

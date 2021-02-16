@@ -10,6 +10,8 @@ import Capacitaciones from './pages/Capacitaciones';
 import Supervisiones from './pages/Supervisiones';
 import Menu from './pages/Menu';
 import Materiales from './pages/Materiales';
+import MaterialesDescription from './pages/MaterialesDescription';
+import GaleriaDeFotos from './pages/GaleriaDeFotos';
 
 function App() {
   return (
@@ -21,7 +23,9 @@ function App() {
             <Route path="/quienes-somos" component={QuienesSomos} />
             <Route path="/capacitaciones" component={Capacitaciones} />
             <Route path="/supervisiones" component={Supervisiones} />
-            <Route path="/materiales" component={Materiales} />
+            <Route exact path="/materiales" component={Materiales} />
+            <Route path="/materiales/:id" component={MaterialesDescription} />
+            <Route path="/galeria-de-fotos" component={GaleriaDeFotos} />
             <Route path="/menu" component={Menu} />
         </Switch>
       <Footer/>

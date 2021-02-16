@@ -2,8 +2,12 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import { useTranslation } from 'react-i18next';
 
 export default function Supervisiones() {
+
+  const { t } = useTranslation();
+
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, e) => {
     Swal.fire({
@@ -49,8 +53,6 @@ export default function Supervisiones() {
       );
   };
 
-  /*     const { t } = useTranslation(); */
-
   return (
     <Fade>
       <section>
@@ -64,7 +66,7 @@ export default function Supervisiones() {
                 alt="header4 somospsicope"
               />
               <div className="text-on-header2 text-on-header2-green">
-                <h1>Supervisiones</h1>
+                <h1>{t("supervisiones-header")}</h1>
               </div>
             </div>
             {/* <div className="col-12 contenedor-de-lineas contenedor-de-lineas-amarillo"></div> */}
@@ -84,9 +86,7 @@ export default function Supervisiones() {
                     style={{ fontWeight: "bold" }}
                   >
                     <p>
-                      Un espacio de intercambio y diálogo para repensar la
-                      práctica psicopedagógica desde el
-                      <br /> enfoque nueropsicológico y el sistémico.
+                    {t("supervisiones-description")}
                     </p>
                   </div>
                 </div>
@@ -105,10 +105,7 @@ export default function Supervisiones() {
                     style={{ backgroundColor: "#f0a2c6" }}
                   >
                     <p>
-                      Supervisiones
-                      <br /> clínicas
-                      <br />
-                      (Diagnóstico y tratamiento)
+                    {t("supervisiones-card1")}
                     </p>
                   </div>
                   <div
@@ -116,8 +113,7 @@ export default function Supervisiones() {
                     style={{ backgroundColor: "#90ccea" }}
                   >
                     <p style={{ marginTop: "22px" }}>
-                      Supervisiones
-                      <br /> de dispositivos
+                    {t("supervisiones-card2")}
                     </p>
                   </div>
                   <div
@@ -125,8 +121,7 @@ export default function Supervisiones() {
                     style={{ backgroundColor: "#8abd44" }}
                   >
                     <p style={{ marginTop: "22px" }}>
-                      Supervisiones
-                      <br /> de tesis de grado
+                    {t("supervisiones-card3")}
                     </p>
                   </div>
                 </div>
@@ -150,18 +145,13 @@ export default function Supervisiones() {
                   <div className="col-lg-6 sm-12">
                     <div className="supervisiones2">
                       <h2>
-                        Solicitá
-                        <br />
-                        una entrevista{" "}
+                      {t("supervisiones-solicita")}
                       </h2>
                       <p>
-                        Se coordina fecha y hora en base a la disponibilidad de
-                        ambas partas. Completá el formulario y nos comunicaremos
-                        con vos a la brevedad.
+                      {t("supervisiones-coordina")}
                       </p>
                       <h5>
-                        Las supervisiones tienen una duración de 1:30hs
-                        aproximadamente por plataforma Zoom.
+                      {t("supervisiones-duracion")}
                       </h5>
                     </div>
                   </div>
